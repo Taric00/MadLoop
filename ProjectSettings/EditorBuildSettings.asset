@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/zMeinMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: ae6a32b06bdde564bb5f1450b1c7fe8b
+  - enabled: 1
     path: Assets/Scenes/Muhammet.unity
     guid: cf3aa6add6741854ebd5b07c5ec1717d
   - enabled: 1
-    path: Assets/Scenes/Options.unity
-    guid: ae6a32b06bdde564bb5f1450b1c7fe8b
+    path: Assets/Scenes/zCredits.unity
+    guid: 7bbb6d268d7b3814691a0c63b700e23d
   m_configObjects: {}
