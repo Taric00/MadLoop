@@ -19,11 +19,11 @@ namespace PlayerScripts
         {
             if (Input.GetKey(KeyCode.W))
             {
-                transform.Translate(Vector3.forward * (MovementSpeed * Time.deltaTime), Space.World);
+                transform.Translate(Vector3.forward * (MovementSpeed * Time.deltaTime));
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                transform.Translate(Vector3.back * (MovementSpeed * Time.deltaTime), Space.World);
+                transform.Translate(Vector3.back * (MovementSpeed * Time.deltaTime));
             }
             
         }
