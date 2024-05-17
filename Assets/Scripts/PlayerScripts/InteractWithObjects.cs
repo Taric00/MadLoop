@@ -1,8 +1,7 @@
-using System;
 using Interfaces;
 using UnityEngine;
 
-namespace CharacterScripts
+namespace PlayerScripts
 {
     public class InteractWithObjects : MonoBehaviour
     {
@@ -22,7 +21,7 @@ namespace CharacterScripts
 
             if (hasHit)
             {
-                if (Input.GetKey(KeyCode.F))
+                if (Input.GetMouseButtonDown(0))
                 {
                     GameObject o = hit.transform.gameObject;
                     if (o.TryGetComponent(out Iinteractable interactableObject))
