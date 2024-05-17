@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 public class PlayButton : MonoBehaviour
 {
 
-    public void ChangeScene()
+    public void ChangeScene(int index)
     {
         //SceneManager.LoadScene("oynu_sahnesi");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(index);
     }
 
+    public void Sad()
+    {
+        Debug.Log("deneme");
+    }
+    
 }
