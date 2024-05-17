@@ -6,7 +6,6 @@ namespace PlayerScripts
     public class PlayerMovement : MonoBehaviour
     {
         public float MovementSpeed;
-        public float TurnSpeed;
 
 
         private void Update()
@@ -27,17 +26,7 @@ namespace PlayerScripts
             }
             
         }
-
-        public void Turn()
-        {
-            if (Input.GetKey(KeyCode.D))
-            {
-                transform.Rotate(0, TurnSpeed, 0);
-            }else if (Input.GetKey(KeyCode.A))
-            {
-                transform.Rotate(0, -TurnSpeed, 0);
-            }
-        }
+        
         
     }
 }

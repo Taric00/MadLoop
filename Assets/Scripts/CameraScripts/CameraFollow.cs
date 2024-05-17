@@ -10,6 +10,7 @@ namespace CameraScripts
         public float CamMin;
         public float CamMax;
         
+        public float TurnSpeed;
         private float _xRotation = 0f;
 
         private void Awake()
@@ -36,5 +37,18 @@ namespace CameraScripts
             // Karakterin y-ekseni etrafında dönmesi
             Character.Rotate(Vector3.up * mouseX);
         }
+        
+        public void Turn()
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Rotate(0, TurnSpeed, 0);
+            }else if (Input.GetKey(KeyCode.A))
+            {
+                transform.Rotate(0, -TurnSpeed, 0);
+            }
+        }
+        
+        
     }
 }
