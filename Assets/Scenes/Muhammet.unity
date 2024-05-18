@@ -1379,6 +1379,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.85998535
       objectReference: {fileID: 0}
+    - target: {fileID: 5243278563281675865, guid: bbd5a198d99a11945a0ecaca33871730, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7227321531224602846, guid: bbd5a198d99a11945a0ecaca33871730, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1517,6 +1521,10 @@ PrefabInstance:
     - target: {fileID: 470655605514966038, guid: 0a2992e2fbe02fc44b8ea565b427bae9, type: 3}
       propertyPath: TurnSpeed
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 470655605514966038, guid: 0a2992e2fbe02fc44b8ea565b427bae9, type: 3}
+      propertyPath: MovementSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1685494396745814718, guid: 0a2992e2fbe02fc44b8ea565b427bae9, type: 3}
       propertyPath: m_Enabled

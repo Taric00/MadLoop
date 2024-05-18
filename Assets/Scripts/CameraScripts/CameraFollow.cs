@@ -10,7 +10,7 @@ namespace CameraScripts
         public float CamMin;
         public float CamMax;
 
-        public float TurnSpeed;
+        public float MovementSpeed;
         private float _xRotation = 0f;
 
         private void Awake()
@@ -39,13 +39,14 @@ namespace CameraScripts
 
         private void Turn()
         {
+            // Sağa basınca sağa gitsin
             if (Input.GetKey(KeyCode.D))
             {
-                Character.Rotate(Vector3.up * TurnSpeed * Time.deltaTime);
+                Character.Translate(Vector3.right * (MovementSpeed * Time.deltaTime));
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                Character.Rotate(Vector3.up * -TurnSpeed * Time.deltaTime);
+                Character.Translate(Vector3.left * (MovementSpeed * Time.deltaTime));
             }
         }
     }
