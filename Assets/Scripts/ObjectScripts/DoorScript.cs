@@ -7,20 +7,24 @@ namespace ObjectScripts
     {
         public Animator Animator;
         private bool isAlreadyOpened;
+        public bool isHaveKey = false;
         
         public void CanInteractable()
         {
-            if (!isAlreadyOpened)
+            if (isHaveKey)
             {
-                Animator.SetBool("CloseDoor",false);
-                Animator.SetBool("OpenDoor",true);
-                isAlreadyOpened = true;
-            }
-            else
-            {
-                Animator.SetBool("OpenDoor",false);
-                Animator.SetBool("CloseDoor",true);
-                isAlreadyOpened = false;
+                if (!isAlreadyOpened)
+                {
+                    Animator.SetBool("CloseDoor",false);
+                    Animator.SetBool("OpenDoor",true);
+                    isAlreadyOpened = true;
+                }
+                else
+                {
+                    Animator.SetBool("OpenDoor",false);
+                    Animator.SetBool("CloseDoor",true);
+                    isAlreadyOpened = false;
+                }
             }
         }
     }
