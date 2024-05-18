@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5275745801110316196}
   - component: {fileID: 4651958109700894188}
+  - component: {fileID: 7050366253636833415}
   m_Layer: 0
   m_Name: GameRoot
   m_TagString: Untagged
@@ -45,3 +46,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 7603819855911626315, guid: bbd5a198d99a11945a0ecaca33871730, type: 3}
+--- !u!114 &7050366253636833415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502417199912271634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca714e59c0eb6848b1fda84bb228917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
