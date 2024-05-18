@@ -1,71 +1,77 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class Diyalog : MonoBehaviour
+namespace MenuScripts
 {
-
-    public TextMeshProUGUI textComponent;
-    public string[] lines;
-    public float textSpeed;
-
-    private int index;
-
-    // Start is called before the first frame update
-    void Start()
+    public class Diyalog : MonoBehaviour
     {
-        textComponent.text = string.Empty;
-        StartDialogue();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
+        public TextMeshProUGUI textComponent;
+        public string[] lines;
+        public float textSpeed;
+        public GameObject point;
+        
+        private int index;
+        
+        void Start()
         {
-            if(textComponent.text == lines[index])
+            textComponent.text = string.Empty;
+            StartDialogue();
+        }
+
+        void Update()
+        {
+            if (gameObject.activeSelf)
             {
-                NextLine();
+                Debug.Log("Diyalog aktif");
+                point.SetActive(false);
+            }
+            
+            if(Input.GetMouseButtonDown(0))
+            {
+                if(textComponent.text == lines[index])
+                {
+                    NextLine();
+                }
+                else
+                {
+                    StopAllCoroutines();
+                    textComponent.text = lines[index];
+                }
+            }
+        }
+
+
+        void StartDialogue()
+        {
+            index = 0;
+            StartCoroutine(TypeLine());
+        }
+
+        IEnumerator TypeLine()
+        {
+            foreach(char c in lines[index].ToCharArray())
+            {
+                textComponent.text += c;
+                yield return new WaitForSeconds(textSpeed);
+            }
+        }
+
+        void NextLine()
+        {
+            if (index < lines.Length - 1)
+            {
+                index++;
+                textComponent.text = string.Empty;
+                StartCoroutine(TypeLine());
             }
             else
             {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
+                gameObject.SetActive(false);
             }
-        }
-    }
 
-
-    void StartDialogue()
-    {
-        index = 0;
-        StartCoroutine(TypeLine());
-    }
-
-    IEnumerator TypeLine()
-    {
-        foreach(char c in lines[index].ToCharArray())
-        {
-            textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
-            //yield return new WaitForSecondsRealtime(textSpeed);
-        }
-    }
-
-    void NextLine()
-    {
-        if (index < lines.Length - 1)
-        {
-            index++;
-            textComponent.text = string.Empty;
-            StartCoroutine(TypeLine());
-        }
-        else
-        {
-            gameObject.SetActive(false);
         }
 
     }
-
 }

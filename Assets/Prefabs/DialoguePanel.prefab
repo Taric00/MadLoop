@@ -224,9 +224,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 8311494247216642003}
-  lines:
-  - "abcasjd\u0131asndnaskdnaksndkasjdbjabsdjbasjdbajsbdjas"
-  - dsffasjhdbajsbdjabsdjasvdahsvdhgavshdvashdvhasvdhavsdhavshdvahsvdh
-  - sad21313dsffasjhdbajsbdjabsdjasvdahsvdhgavshdvashdvhasvdhavsdhavshdvahsvdh
-  - "2341412412412j4 j djsa jd asj dja sjd asd aj sdaads\u0131nd"
+  lines: []
   textSpeed: 0.001
