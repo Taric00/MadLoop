@@ -225,4 +225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 8311494247216642003}
   lines: []
-  textSpeed: 0.001
+  textSpeed: 0.01
+  point: {fileID: 1660740151710069693, guid: f5fa7e7e038955b47a89ae0dbc8ac4e6, type: 3}
+  endDialogueDelay: 1.5
