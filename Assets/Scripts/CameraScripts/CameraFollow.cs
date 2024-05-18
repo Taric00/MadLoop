@@ -32,10 +32,8 @@ namespace CameraScripts
             _xRotation -= mouseY;
             _xRotation = Mathf.Clamp(_xRotation, -CamMin, CamMax);
 
-            // Sadece kameranın yukarı/aşağı hareketi
             transform.localRotation = Quaternion.Euler(_xRotation, 0, 0);
 
-            // Karakterin y-ekseni etrafında dönmesi
             Character.Rotate(Vector3.up * mouseX);
         }
 
