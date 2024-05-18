@@ -9,7 +9,7 @@ namespace CameraScripts
 
         public float CamMin;
         public float CamMax;
-        
+
         public float TurnSpeed;
         private float _xRotation = 0f;
 
@@ -21,6 +21,7 @@ namespace CameraScripts
         private void Update()
         {
             LookAround();
+            Turn();
         }
 
         private void LookAround()
@@ -37,18 +38,17 @@ namespace CameraScripts
             // Karakterin y-ekseni etrafında dönmesi
             Character.Rotate(Vector3.up * mouseX);
         }
-        
-        public void Turn()
+
+        private void Turn()
         {
             if (Input.GetKey(KeyCode.D))
             {
-                transform.Rotate(0, TurnSpeed, 0);
-            }else if (Input.GetKey(KeyCode.A))
+                Character.Rotate(Vector3.up * TurnSpeed * Time.deltaTime);
+            }
+            else if (Input.GetKey(KeyCode.A))
             {
-                transform.Rotate(0, -TurnSpeed, 0);
+                Character.Rotate(Vector3.up * -TurnSpeed * Time.deltaTime);
             }
         }
-        
-        
     }
 }
