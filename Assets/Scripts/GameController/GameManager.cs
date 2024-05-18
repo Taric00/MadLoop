@@ -28,6 +28,7 @@ namespace GameController
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             isGamePaused = true;
+            Debug.Log("Game Paused");
         }
 
         public void ReturnGame()
