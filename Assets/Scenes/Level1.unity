@@ -1193,6 +1193,10 @@ PrefabInstance:
       value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5199222127236906521, guid: 4c607c5c9da222f46b739a4b1e897014, type: 3}
+      propertyPath: endDialogueDelay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5199222127236906521, guid: 4c607c5c9da222f46b739a4b1e897014, type: 3}
       propertyPath: lines.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2061,7 +2065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1685494396745814718, guid: 0a2992e2fbe02fc44b8ea565b427bae9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3142589152391369130, guid: 0a2992e2fbe02fc44b8ea565b427bae9, type: 3}
       propertyPath: m_LocalScale.y

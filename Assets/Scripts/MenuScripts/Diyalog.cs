@@ -6,14 +6,14 @@ namespace MenuScripts
 {
     public class Diyalog : MonoBehaviour
     {
-
         public TextMeshProUGUI textComponent;
         public string[] lines;
         public float textSpeed;
         public GameObject point;
-        
+        public float endDialogueDelay = 2.0f;
+
         private int index;
-        
+
         void Start()
         {
             textComponent.text = string.Empty;
@@ -24,13 +24,12 @@ namespace MenuScripts
         {
             if (gameObject.activeSelf)
             {
-                Debug.Log("Diyalog aktif");
                 point.SetActive(false);
             }
-            
-            if(Input.GetMouseButtonDown(0))
+
+            if (Input.GetMouseButtonDown(0))
             {
-                if(textComponent.text == lines[index])
+                if (textComponent.text == lines[index])
                 {
                     NextLine();
                 }
@@ -42,7 +41,6 @@ namespace MenuScripts
             }
         }
 
-
         void StartDialogue()
         {
             index = 0;
@@ -51,10 +49,17 @@ namespace MenuScripts
 
         IEnumerator TypeLine()
         {
-            foreach(char c in lines[index].ToCharArray())
+            foreach (char c in lines[index].ToCharArray())
             {
                 textComponent.text += c;
                 yield return new WaitForSeconds(textSpeed);
+            }
+
+            if (index == lines.Length - 1)
+            {
+                yield return new WaitForSeconds(endDialogueDelay);
+                gameObject.SetActive(false);
+                point.SetActive(true);
             }
         }
 
@@ -66,12 +71,6 @@ namespace MenuScripts
                 textComponent.text = string.Empty;
                 StartCoroutine(TypeLine());
             }
-            else
-            {
-                gameObject.SetActive(false);
-            }
-
         }
-
     }
 }
