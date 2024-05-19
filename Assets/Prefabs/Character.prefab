@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514e48db78115ca478bfaeb50e14b3e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MouseSensitivity: 1000
+  MouseSensitivity: 450
   Character: {fileID: 3142589152391369130}
   CamMin: 45
   CamMax: 45

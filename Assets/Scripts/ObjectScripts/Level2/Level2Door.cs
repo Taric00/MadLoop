@@ -25,7 +25,7 @@ namespace ObjectScripts.Level2
         {
             yield return new WaitForSeconds(WaitAnimationTime);
             Debug.Log("Çalıştı");
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
         }
 
         
