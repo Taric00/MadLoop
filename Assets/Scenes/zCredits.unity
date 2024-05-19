@@ -411,10 +411,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 62619909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.33989576, y: 0}
-  m_AnchorMax: {x: 0.663625, y: 1}
-  m_AnchoredPosition: {x: 22.5, y: -828.5}
-  m_SizeDelta: {x: 45, y: -737}
+  m_AnchorMin: {x: 0.17266667, y: 0}
+  m_AnchorMax: {x: 0.8228542, y: 1}
+  m_AnchoredPosition: {x: 4.120117, y: 252.94}
+  m_SizeDelta: {x: 7.1936035, y: -737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &539438222
 Animator:
@@ -457,8 +457,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Muhammet Karay\u0131lan\n\n\nDila Akay\n\n\nCeren Co\u015Fkun\n\n\nMehmet
-    Tar\u0131k Albayrak\n\n\nMehmet Mirio\u011Flu"
+  m_text: "System Desinger And Game Developers\n-Muhammet Karay\u0131lan\n-Mehmet
+    Tar\u0131k Albayrak\n\n\n\nGame, Level And Narritive Desinger \n- Zehra Dila
+    Akay\n\n\n\n3D Artist\n-Ceren Co\u015Fkun\n-Mehmet Mirio\u011Flu\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1eaa76098c6928f4dba752e8a709b64b, type: 2}
   m_sharedMaterial: {fileID: -7888538096089987356, guid: 1eaa76098c6928f4dba752e8a709b64b, type: 2}
