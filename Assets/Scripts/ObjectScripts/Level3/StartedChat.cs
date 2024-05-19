@@ -14,7 +14,7 @@ namespace ObjectScripts.Level3
 
         IEnumerator EnableMessage()
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             FirstDialogue.SetActive(true);
         }
         
