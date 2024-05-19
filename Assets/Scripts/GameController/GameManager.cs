@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 namespace GameController
@@ -6,6 +7,7 @@ namespace GameController
     {
         public GameObject PauseMenu;
         private bool isGamePaused;
+        public TextMeshProUGUI TimerText;
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -24,19 +26,28 @@ namespace GameController
         private void OpenPauseMenu()
         {
             PauseMenu.SetActive(true);
+            if (TimerText != null)
+            {
+                TimerText.gameObject.SetActive(false);
+            }
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             isGamePaused = true;
             Debug.Log("Game Paused");
+            
         }
 
         public void ReturnGame()
         {
-            PauseMenu.SetActive(false);
-            Time.timeScale = 1;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            if (TimerText != null)
+            {
+                TimerText.gameObject.SetActive(false);
+            }
+            PauseMenu.SetActive(false);
+            Time.timeScale = 1;
             isGamePaused = false;
             Debug.Log("Game is continue");
             Debug.Log("aS" + PauseMenu.activeSelf);
