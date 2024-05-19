@@ -9,6 +9,7 @@ namespace ObjectScripts.Level3
     {
         public GameObject panzehirDialogue;
         public GameObject Key;
+        public GameObject Deleted;
         public void CanInteractable()
         {
             panzehirDialogue.SetActive(true);
@@ -18,7 +19,7 @@ namespace ObjectScripts.Level3
         IEnumerator PanzehirWait()
         {
             yield return new WaitForSeconds(2);
-            Destroy(gameObject);
+            Destroy(Deleted);
             Key.SetActive(true);
         }
     }
