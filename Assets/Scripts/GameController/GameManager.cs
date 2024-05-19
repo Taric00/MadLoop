@@ -38,6 +38,9 @@ namespace GameController
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             isGamePaused = false;
+            Debug.Log("Game is continue");
+            Debug.Log("aS" + PauseMenu.activeSelf);
+            Debug.Log("aIH" + PauseMenu.activeInHierarchy);
         }
         
         

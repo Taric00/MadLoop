@@ -1,23 +1,34 @@
+using System.Collections;
 using Interfaces;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace ObjectScripts.Level2
 {
     public class Level2Door : MonoBehaviour,Iinteractable
     {
-        public GameObject DialoguePanel;
         public bool isHaveKey;
+        public Animator Animator;
+        public float WaitAnimationTime;
+
         public void CanInteractable()
         {
-            if (gameObject.name == "Kapi1")
+            if (isHaveKey)
             {
-                DialoguePanel.SetActive(true);
-            }
-
-            if (gameObject.name == "Kapi2" && isHaveKey)
-            {
-                Debug.Log("Kapı açıldı");
+                Animator.SetBool("OpenDoor",true);
+                StartCoroutine("WaitDoorAnimations");
             }
         }
+        
+        IEnumerator WaitDoorAnimations()
+        {
+            yield return new WaitForSeconds(WaitAnimationTime);
+            Debug.Log("Çalıştı");
+            SceneManager.LoadScene(4);
+        }
+
+        
+        
     }
 }
