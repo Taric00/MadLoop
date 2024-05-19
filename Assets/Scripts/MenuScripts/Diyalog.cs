@@ -49,6 +49,7 @@ namespace MenuScripts
 
         IEnumerator TypeLine()
         {
+            textComponent.text = string.Empty;
             foreach (char c in lines[index].ToCharArray())
             {
                 textComponent.text += c;
@@ -57,9 +58,7 @@ namespace MenuScripts
 
             if (index == lines.Length - 1)
             {
-                yield return new WaitForSeconds(endDialogueDelay);
-                gameObject.SetActive(false);
-                point.SetActive(true);
+                yield return null; 
             }
         }
 
@@ -68,8 +67,12 @@ namespace MenuScripts
             if (index < lines.Length - 1)
             {
                 index++;
-                textComponent.text = string.Empty;
                 StartCoroutine(TypeLine());
+            }
+            else
+            {
+                gameObject.SetActive(false);
+                point.SetActive(true);
             }
         }
     }

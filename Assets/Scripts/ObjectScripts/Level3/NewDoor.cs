@@ -1,6 +1,7 @@
 using System;
 using Interfaces;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ObjectScripts.Level3
 {
@@ -8,7 +9,7 @@ namespace ObjectScripts.Level3
     {
         public AnahtarKodu AnahtarKodu;
         private Animator _animator;
-
+        public bool Key;
         private void Start()
         {
             _animator = GetComponent<Animator>();
@@ -16,9 +17,10 @@ namespace ObjectScripts.Level3
 
         public void CanInteractable()
         {
-            if (!AnahtarKodu.isHaveKey)
+            if (Key)
             {
                 _animator.SetBool("Key",true);
+                SceneManager.LoadScene(0);
             }
         }
     }
